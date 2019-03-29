@@ -20,5 +20,5 @@ and paste it in that `effects` folder.
 ## Should work from the Olive Editor continuous build after Mar 30, 2019.
 _____________________
 
-## If you want to contribute some effects here please fork it and pull a request. It will be merged.
+### If you want to contribute some effects here please fork it and pull a request. It will be merged.
 Thanks.
