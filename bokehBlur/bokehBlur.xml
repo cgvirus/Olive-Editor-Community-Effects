@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect name="Bokeh Blur" category="Community">
+	
+
+	<row name="Blur">
+		<field type="double" min="0.0" default="1.0" max="10.0" id="Amount"/>
+	</row>
+
+	<row name="Disc Size">
+		<field type="double" min="64" default="256" max="1024" id="Samples"/>
+	</row>
+
+
+	<row name="Exposure">
+		<field type="double" min="0.01" default="1.0" max="10.0" id="Exposure"/>
+	</row>
+
+	<shader vert="../COMMON/common.vert" frag="bokehBlur.frag"/>
+</effect>
