@@ -22,7 +22,7 @@ copy the extracted forlder named `Olive-Editor-Community-Effects-master`>
 
 and paste it in that `effects` folder.
 
-### For individual effect downloads:
+#### For individual effect downloads:
 click in the effect folder you want to download>
 
 copy the link and paste in http://kinolien.github.io/gitzip/ to download>
