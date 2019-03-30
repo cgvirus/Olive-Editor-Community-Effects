@@ -12,5 +12,5 @@
 	<row name="Intensity">
 		<field type="double" min="0.0" default="5.0" max="10.0" id="THRESHOLD"/>
 	</row>
-	<shader vert="common.vert" frag="glitch.frag"/>
+	<shader vert="../COMMON/common.vert" frag="glitch.frag"/>
 </effect>
