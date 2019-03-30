@@ -39,6 +39,7 @@ _____________________
 ### Effect List:
 
 - **[Glitch](https://github.com/cgvirus/Olive-Editor-Community-Effects/tree/master/glitch)** : Three types of Glitch Effect.
+- **[Bookeh Blur](https://github.com/cgvirus/Olive-Editor-Community-Effects/tree/master/bokehBlur)** : Bookeh Blur (Disc).
 
 
 _______________________
