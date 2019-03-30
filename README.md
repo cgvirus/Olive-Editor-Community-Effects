@@ -1,4 +1,4 @@
-# Olive-Editor-Community-Effects
+# [Olive-Editor](https://github.com/olive-editor/olive)-Community-Effects
 A community effort to populate effects for Olive-Editor
 
 ## Install:
