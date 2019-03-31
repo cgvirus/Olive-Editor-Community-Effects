@@ -7,20 +7,19 @@
     
     Licensed under public domain. Feel free to experiment.
     For more information, please refer to http://unlicense.org/
-
+	
 ***/
 
 #define PI 3.14159265
 #define TILE_SIZE 16.0
 
-varying vec2 vTexCoord;
-
-uniform sampler2D tex;
 uniform float THRESHOLD;
 uniform float time;
+uniform sampler2D tex;
 uniform vec2 resolution;
+varying vec2 vTexCoord;
 
-uniform int mode;
+uniform int mode; // Glitch Mode
 
 float sat( float t ) {
 	return clamp( t, 0.0, 1.0 );
@@ -167,6 +166,8 @@ vec3 distort(sampler2D sampler, vec2 uv, float edgeSize)
     return posterize(hsv2rgb(hsv), floor(mix(256.0, pow(1.0 - hsv.z - 0.5, 2.0) * 64.0 * shiftx + 4.0, 1.0 - pow(1.0 - (THRESHOLD*0.1), 5.0))));
 }
 
+
+
 void main()
 {
 	if (mode==0)
@@ -254,7 +255,7 @@ void main()
 	}
 	else if (mode==2)
 	{
-		vec2 uv = gl_FragCoord.xy / resolution.xy;
+	    vec2 uv = gl_FragCoord.xy / resolution.xy;
 	    vec3 outColor;
 	    outColor += distort(tex, uv, 8.0);
 	    gl_FragColor = vec4(outColor, 1.0);
