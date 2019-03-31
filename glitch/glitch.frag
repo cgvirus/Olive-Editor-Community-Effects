@@ -10,10 +10,9 @@
 
 uniform int mode; // Effect Setting
 
-uniform sampler2D tex;
-
 uniform float time;
 uniform float THRESHOLD;
+uniform sampler2D tex;
 uniform vec2 resolution;
 
 varying vec2 vTexCoord;
