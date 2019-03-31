@@ -1,18 +1,23 @@
-//glitch 01, 02, shampain http://www.pouet.net/prod.php?which=60539
-//https://www.shadertoy.com/view/MdfGD2 & https://www.shadertoy.com/view/lsfGD2
-//is license under public domain. Feel free to experiment
-//Modification, extension and implementation by CGVIRUS for Olive-Editor Community
-//is licensed under public domain. Feel free to experiment
-//For more information, please refer to http://unlicense.org/
+/***
+
+    Modification, extension, and implementation by CGVIRUS for the Olive-Editor Community
+    
+    glitch 01, 02, shampain http://www.pouet.net/prod.php?which=60539
+    Port of https://www.shadertoy.com/view/MdfGD2 & https://www.shadertoy.com/view/lsfGD2
+    
+    Licensed under public domain. Feel free to experiment.
+    For more information, please refer to http://unlicense.org/
+
+***/
 
 #define PI 3.14159265
 #define TILE_SIZE 16.0
 
-uniform int mode; // Effect Setting
+uniform sampler2D tex;
+uniform int mode; // Glitch Mode
 
 uniform float time;
 uniform float THRESHOLD;
-uniform sampler2D tex;
 uniform vec2 resolution;
 
 varying vec2 vTexCoord;
