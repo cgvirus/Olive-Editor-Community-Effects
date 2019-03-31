@@ -1,5 +1,5 @@
 # [Olive-Editor](https://github.com/olive-editor/olive)-Community-Effects
-A community effort to populate effects for Olive-Editor
+A community effort to populate effects for Olive-Editor. Should work from the Olive Editor continuous build after Mar 29, 2019.
 
 ## Install:
 - Download the zip file and extract it.
@@ -24,15 +24,14 @@ A community effort to populate effects for Olive-Editor
 ***MUST: you have to make sure the folder COMMON is present in your `effect` folder***
 means you should download the `COMMON`folder at least once for individual download.
 
-## Should work from the Olive Editor continuous build after Mar 29, 2019.
-_____________________
+---
 
 ### Effect List:
 
 - **[Glitch](https://github.com/cgvirus/Olive-Editor-Community-Effects/tree/master/glitch)** : Three types of Glitch Effect.
 - **[Bookeh Blur](https://github.com/cgvirus/Olive-Editor-Community-Effects/tree/master/bokehBlur)** : Bookeh Blur (Disc).
 
-_______________________
+---
 
 ### If you want to contribute some effects here please fork it and pull a request. It will be merged.
 Thanks.
