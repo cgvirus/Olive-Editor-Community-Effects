@@ -8,12 +8,13 @@
 #define PI 3.14159265
 #define TILE_SIZE 16.0
 
+uniform int mode; // Effect Setting
+
 uniform sampler2D tex;
 
 uniform float time;
 uniform float THRESHOLD;
 uniform vec2 resolution;
-uniform int mode;
 
 varying vec2 vTexCoord;
 
