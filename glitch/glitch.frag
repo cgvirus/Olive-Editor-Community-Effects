@@ -5,19 +5,16 @@
 //is licensed under public domain. Feel free to experiment
 //For more information, please refer to http://unlicense.org/
 
-
-uniform sampler2D tex;
-varying vec2 vTexCoord;
-uniform float time;
-uniform vec2 resolution;
-
-uniform float THRESHOLD;
-
-uniform int mode;
-
 #define PI 3.14159265
 #define TILE_SIZE 16.0
 
+uniform sampler2D tex;
+varying vec2 vTexCoord;
+
+uniform float time;
+uniform float THRESHOLD;
+uniform vec2 resolution;
+uniform int mode;
 
 float sat( float t ) {
 	return clamp( t, 0.0, 1.0 );
