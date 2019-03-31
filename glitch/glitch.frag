@@ -9,12 +9,13 @@
 #define TILE_SIZE 16.0
 
 uniform sampler2D tex;
-varying vec2 vTexCoord;
 
 uniform float time;
 uniform float THRESHOLD;
 uniform vec2 resolution;
 uniform int mode;
+
+varying vec2 vTexCoord;
 
 float sat( float t ) {
 	return clamp( t, 0.0, 1.0 );
