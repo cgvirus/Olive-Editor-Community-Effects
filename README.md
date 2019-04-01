@@ -34,6 +34,7 @@ means you should download the `COMMON`folder at least once for individual downlo
 - **[Sharpen](https://github.com/cgvirus/Olive-Editor-Community-Effects/tree/master/sharpen)** : Sharpen Effect.
 - **[Edge Find](https://github.com/cgvirus/Olive-Editor-Community-Effects/tree/master/findEdges)** : Find Edges.
 - **[Halftone](https://github.com/cgvirus/Olive-Editor-Community-Effects/tree/master/halftone)** : Creates Halftone.
+- **[Barrel Distortion](https://github.com/cgvirus/Olive-Editor-Community-Effects/tree/master/barrelDistortion)** : Barrel Distortion with radial Blur.
 
 ---
 
