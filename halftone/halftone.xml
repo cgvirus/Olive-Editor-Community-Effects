@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect name="Halftone" category="Community">
+	
+
+	<row name="DOTSIZE">
+		<field type="double" min="0.1" default="2.0" max="10.0" id="DOTSIZE"/>
+	</row>
+	<row name="scale">
+		<field type="double" min="2.0" default="10.0" max="20.0" id="scale"/>
+	</row>
+	<row name="angle">
+		<field type="double" min="-90.0" default="25.0" max="90.0" id="angle"/>
+	</row>
+
+	<shader vert="../COMMON/common.vert" frag="halftone.frag"/>
+</effect>
