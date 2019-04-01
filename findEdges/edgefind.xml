@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect name="Find Edge" category="Community">
+	
+
+	<row name="Amount">
+		<field type="double" min="0.0" default="1.0" max="100.0" id="sharpness"/>
+	</row>
+
+
+	<shader vert="../COMMON/common.vert" frag="edgefind.frag"/>
+</effect>
