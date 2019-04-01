@@ -33,6 +33,7 @@ means you should download the `COMMON`folder at least once for individual downlo
 - **[Denoise](https://github.com/cgvirus/Olive-Editor-Community-Effects/tree/master/denoise)** : Simple Denoise.
 - **[Sharpen](https://github.com/cgvirus/Olive-Editor-Community-Effects/tree/master/sharpen)** : Sharpen Effect.
 - **[Edge Find](https://github.com/cgvirus/Olive-Editor-Community-Effects/tree/master/findEdges)** : Find Edges.
+- **[Halftone](https://github.com/cgvirus/Olive-Editor-Community-Effects/tree/master/halftone)** : Creates Halftone.
 
 ---
 
