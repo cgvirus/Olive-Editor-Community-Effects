@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect name="Barrel Distortion" category="Community">
+	
+
+	<row name="Barrel Distortion">
+		<field type="double" min="0.0" default="50.0" max="100.0" id="max_distort_px"/>
+	</row>
+	<row name="Chromatic Aberration">
+		<field type="double" min="-3.0" default="-2.0" max="3.0" id="min_distort_factor"/>
+	</row>
+
+	<shader vert="../COMMON/common.vert" frag="barrelDistortion.frag"/>
+</effect>
