@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect name="Denoise" category="Community">
+	
+
+	<row name="Spatial">
+		<field type="double" min="0.1" default="1.0" max="200.0" id="sigma_s"/>
+	</row>
+
+	<row name="Temporal">
+		<field type="double" min="0.1" default="1.0" max="200.0" id="sigma_r"/>
+	</row>
+
+
+	<shader vert="../COMMON/common.vert" frag="denoise.frag"/>
+</effect>
