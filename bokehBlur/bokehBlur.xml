@@ -3,7 +3,7 @@
 	
 
 	<row name="Blur">
-		<field type="double" min="0.0" default="1.0" max="10.0" id="Amount"/>
+		<field type="double" min="0.0" default="0.5" max="10.0" id="Amount"/>
 	</row>
 
 	<row name="Disc Size">
