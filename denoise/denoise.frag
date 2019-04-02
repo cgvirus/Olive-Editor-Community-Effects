@@ -31,7 +31,7 @@ float normpdf3(in vec3 v, in float sigma)
 void main()
 {
 	vec2 uv = gl_FragCoord.xy / resolution.xy;
-	vec3 c = texture(tex, uv).rgb;
+	vec3 c = texture2D(tex, uv).rgb;
 	{
 		//declare stuff
 		int kSize = int(min((MSIZE-1)/2., 1.5*(sigma_s*0.5)*renderScale.x));
@@ -54,7 +54,7 @@ void main()
 		{
 			for (int j=-kSize; j <= kSize; ++j)
 			{
-				cc = texture(tex, uv + (vec2(float(i),float(j))) / resolution.xy).rgb;
+				cc = texture2D(tex, uv + (vec2(float(i),float(j))) / resolution.xy).rgb;
 				factor = normpdf3(cc-c, (sigma_r*.001))*bZ*kernel[kSize+j]*kernel[kSize+i];
 				Z += factor;
 				final_colour += factor*cc;
@@ -63,6 +63,6 @@ void main()
 		}
 		
 		
-		gl_FragColor = vec4(final_colour/Z, 1.0);
+		gl_FragColor = vec4(final_colour/Z, gl_FragColor.a);
 	}
 }

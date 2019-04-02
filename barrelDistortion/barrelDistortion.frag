@@ -175,5 +175,5 @@ void main()
     //outcol = lin2srgb( outcol );
     outcol += rnd/255.0;
     
-	gl_FragColor = vec4( outcol, 1.0);
+	gl_FragColor = vec4( outcol, gl_FragColor.a);
 }

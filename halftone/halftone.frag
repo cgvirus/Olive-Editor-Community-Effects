@@ -88,5 +88,5 @@ void main()
 	)));
     
     //c = pow(c, vec3(1.0/2.2)); // Gamma encode.
-	gl_FragColor = vec4(c, 1.0);
+	gl_FragColor = vec4(c, gl_FragColor.a);
 }

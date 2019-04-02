@@ -30,5 +30,5 @@ void main(void)
 	// vec3 col = center + (center - around) * sharpness;
 	vec3 col = (center - around) * sharpness;
 	
-    gl_FragColor = vec4(col,1.0);
+    gl_FragColor = vec4(col,gl_FragColor.a);
 }

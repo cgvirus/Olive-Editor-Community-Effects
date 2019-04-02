@@ -1,22 +1,20 @@
-/***
-    
-    Bokeh disc. Fixed for Scaling and Noise, Optimized for MIPMAP
-    
-    Port of https://www.shadertoy.com/view/4d2Xzw by David Hoskins.
-    Adaption and Implementation by CGVIRUS for Olive-Editor Community
-        
-    License Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License.
-	
-***/
+// https://www.shadertoy.com/view/4d2Xzw
+// Bokeh disc.
+// original version by David Hoskins.
+// License Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License.
+
+//Adaption and Implementation by CGVIRUS for Olive-Editor Community
+//Fixed for Scaling and Noise, Optimized for MIPMAP
+
+
+uniform sampler2D tex;
+varying vec2 vTexCoord;
+uniform vec2 resolution;
 
 #define USE_MIPMAP
 #define GOLDEN_ANGLE 2.39996323
 
-uniform sampler2D tex;
-uniform vec2 resolution;
-varying vec2 vTexCoord;
 
-// Effect Settings
 uniform float Samples;
 uniform float Amount;
 uniform float Exposure;
@@ -48,8 +46,11 @@ vec3 Bokeh(sampler2D tex, vec2 uv, float radius, float amount)
 
 void main()
 {
+    
     vec2 uv = gl_FragCoord.xy / resolution.xy;  
     float a = 40.0;
     uv *= vec2(1.0, 1.0);
-    gl_FragColor = vec4(Bokeh(tex, uv, Amount, a), 1.0);
+    gl_FragColor = vec4(Bokeh(tex, uv, Amount, a), gl_FragColor.a);
+    
+    
 }
