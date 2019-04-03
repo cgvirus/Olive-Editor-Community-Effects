@@ -1,9 +1,12 @@
-//glitch 01, 02, shampain http://www.pouet.net/prod.php?which=60539
-//https://www.shadertoy.com/view/MdfGD2 & https://www.shadertoy.com/view/lsfGD2
-//is license under public domain. Feel free to experiment
-//Modification, extension and implementation by CGVIRUS for Olive-Editor Community
-//is licensed under public domain. Feel free to experiment
-//For more information, please refer to http://unlicense.org/
+/***
+
+    Port of https://www.shadertoy.com/view/MdfGD2 & https://www.shadertoy.com/view/lsfGD2
+    glitch 01, 02, shampain http://www.pouet.net/prod.php?which=60539
+    Adapted by CGVIRUS for the Olive-Editor Community
+    licensed under public domain. Feel free to experiment
+    For more license information, please refer to http://unlicense.org/
+
+***/
 
 
 uniform sampler2D tex;
@@ -262,7 +265,7 @@ void main()
 		vec2 uv = gl_FragCoord.xy / resolution.xy;
 	    vec3 outColor;
 	    outColor += distort(tex, uv, 8.0);
-	    gl_FragColor = vec4(outColor, gl_FragColor.a);
+	    gl_FragColor = vec4(outColor, texture2D( tex, uv ).a);
 	}
 
 

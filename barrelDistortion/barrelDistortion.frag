@@ -138,7 +138,7 @@ vec3 render( vec2 uv )
     }
     #endif
     
-    return texture( tex, uv ).rgb;
+    return texture2D( tex, uv ).rgb;
 }
 
 void main()
@@ -175,5 +175,5 @@ void main()
     //outcol = lin2srgb( outcol );
     outcol += rnd/255.0;
     
-	gl_FragColor = vec4( outcol, gl_FragColor.a);
+	gl_FragColor = vec4( outcol, texture2D( tex, uv ).a);
 }

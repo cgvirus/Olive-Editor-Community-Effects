@@ -73,6 +73,7 @@ void main()
 	float R = D2R(angle);
 	
 	vec2 fc = gl_FragCoord.xy - ORIGIN;
+	vec2 uv = gl_FragCoord.xy / resolution.xy;
 	
 	mat2 mc = rotm(R + D2R(15.0));
 	mat2 mm = rotm(R + D2R(75.0));
@@ -88,5 +89,5 @@ void main()
 	)));
     
     //c = pow(c, vec3(1.0/2.2)); // Gamma encode.
-	gl_FragColor = vec4(c, gl_FragColor.a);
+	gl_FragColor = vec4(c, texture2D( tex, uv ).a);
 }

@@ -30,5 +30,5 @@ void main(void)
 	// vec3 col = center + (center - around) * sharpness;
 	vec3 col = center + (center - around) * sharpness;
 	
-    gl_FragColor = vec4(col,gl_FragColor.a);
+    gl_FragColor = vec4(col,texture2D( tex, uv ).a);
 }
