@@ -6,7 +6,6 @@
 
 ***/
 
-
 uniform sampler2D tex;
 varying vec2 vTexCoord;
 uniform vec2 resolution;
@@ -16,7 +15,6 @@ const vec2 renderScale = vec2(1.,1.);
 uniform float max_distort_px;
 uniform float min_distort_factor;
 
-
 float remap( float t, float a, float b ) {
 	return clamp( (t - a) / (b - a), 0.0, 1.0 );
 }
@@ -24,18 +22,15 @@ vec2 remap( vec2 t, vec2 a, vec2 b ) {
 	return clamp( (t - a) / (b - a), 0.0, 1.0 );
 }
 
-
 vec3 spectrum_offset_rgb( float t )
 {
-
     float t0 = 3.0 * t - 1.5;
 	vec3 ret = clamp( vec3( -t0, 1.0-abs(t0), t0), 0.0, 1.0);
     return ret;
-
 }
 
 /*
-//For future OCIIO
+// For future OCIIO
 const float gamma = 2.2;
 vec3 lin2srgb( vec3 c )
 {
@@ -46,7 +41,6 @@ vec3 srgb2lin( vec3 c )
     return pow( c, vec3(1.0/gamma));
 }
 */
-
 
 vec3 yCgCo2rgb(vec3 ycc)
 {
@@ -70,7 +64,6 @@ vec3 yuv2rgb( vec3 yuv )
     rgb.b = yuv.x + yuv.y * 2.03211;
     return rgb;
 }
-
 
 vec2 radialdistort(vec2 coord, vec2 amt)
 {
@@ -108,7 +101,6 @@ vec2 distort( vec2 uv, float t, vec2 min_distort, vec2 max_distort )
     return brownConradyDistortion( uv, 75.0 * dist.x );
 }
 
-
 vec3 spectrum_offset_yuv( float t )
 {
     vec3 yuv = vec3( 1.0, 0.0, -1.0*t );
@@ -119,7 +111,6 @@ vec3 spectrum_offset( float t )
 {
   	return spectrum_offset_rgb( t );
 }
-
 
 float nrand( vec2 n )
 {
@@ -145,7 +136,6 @@ void main()
 {	
 	vec2 uv = gl_FragCoord.xy/resolution.xy;
 
-    
 	vec2 max_distort = vec2(max_distort_px) * renderScale.xy / resolution.xy;
     vec2 min_distort = (1.+min_distort_factor) * max_distort;
 

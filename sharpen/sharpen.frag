@@ -5,12 +5,12 @@
 
 ***/
 
-
 uniform sampler2D tex;
 varying vec2 vTexCoord;
 uniform vec2 resolution;
 const vec2 renderScale = vec2(1.,1.);
 
+// Effect Setting
 uniform float sharpness;
 
 void main(void)
@@ -30,5 +30,5 @@ void main(void)
 	// vec3 col = center + (center - around) * sharpness;
 	vec3 col = center + (center - around) * sharpness;
 	
-    gl_FragColor = vec4(col,gl_FragColor.a);
+	gl_FragColor = vec4(col, gl_FragColor.a);
 }

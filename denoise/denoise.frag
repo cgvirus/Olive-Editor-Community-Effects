@@ -5,17 +5,16 @@
 
 ***/
 
+#define MSIZE 30
 
 uniform sampler2D tex;
-varying vec2 vTexCoord;
 uniform vec2 resolution;
+varying vec2 vTexCoord;
 const vec2 renderScale = vec2(1.,1.);
 
-//Effects Parameter
+//Effects Settings
 uniform float sigma_s;
 uniform float sigma_r;
-
-#define MSIZE 30
 
 float normpdf(in float x, in float sigma)
 {
@@ -26,7 +25,6 @@ float normpdf3(in vec3 v, in float sigma)
 {
 	return 0.39894*exp(-0.5*dot(v,v)/(sigma*sigma))/sigma;
 }
-
 
 void main()
 {
@@ -45,7 +43,6 @@ void main()
 			kernel[kSize+j] = kernel[kSize-j] = normpdf(float(j), (sigma_s*0.5)*renderScale.x);
 		}
 		
-		
 		vec3 cc;
 		float factor;
 		float bZ = 1.0/normpdf(0.0, (sigma_r*.001));
@@ -58,11 +55,8 @@ void main()
 				factor = normpdf3(cc-c, (sigma_r*.001))*bZ*kernel[kSize+j]*kernel[kSize+i];
 				Z += factor;
 				final_colour += factor*cc;
-
 			}
 		}
-		
-		
 		gl_FragColor = vec4(final_colour/Z, texture2D(tex, vTexCoord).a);
 	}
 }
