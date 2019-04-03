@@ -63,6 +63,6 @@ void main()
 		}
 		
 		
-		gl_FragColor = vec4(final_colour/Z, gl_FragColor.a);
+		gl_FragColor = vec4(final_colour/Z, texture2D(tex, vTexCoord).a);
 	}
 }
