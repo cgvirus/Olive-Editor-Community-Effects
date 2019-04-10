@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect name="Bloom" category="Community">
+	
+
+	<row name="Threshold">
+		<field type="double" min="0.0" default="5.0" max="99.0" id="Threshold"/>
+	</row>
+
+	<row name="Intensity">
+		<field type="double" min="0.0" default="10.0" max="20.0" id="Intensity"/>
+	</row>
+
+
+	<row name="Blur">
+		<field type="double" min="0.0" default="8.0" max="64.0" id="BlurSize"/>
+	</row>
+
+	<shader vert="../COMMON/common.vert" frag="bloom.frag"/>
+</effect>
