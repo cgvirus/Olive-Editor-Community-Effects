@@ -36,6 +36,7 @@ means you should download the `COMMON`folder at least once for individual downlo
 - **[Halftone](https://github.com/cgvirus/Olive-Editor-Community-Effects/tree/master/halftone)** : Creates Halftone.
 - **[Barrel Distortion](https://github.com/cgvirus/Olive-Editor-Community-Effects/tree/master/barrelDistortion)** : Barrel Distortion with radial Blur.
 - **[Bloom](https://github.com/cgvirus/Olive-Editor-Community-Effects/tree/master/bloom)** : Bloom Effect.
+- **[Kaleidoscope](https://github.com/cgvirus/Olive-Editor-Community-Effects/tree/master/kaleidoscope)** : Kaleidoscope effect.
 
 ---
 
