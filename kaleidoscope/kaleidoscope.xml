@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect name="Kaleidoscope" category="Community">
+	
+
+	<row name="Mode">
+		<field type="combo" default="0" id="mode">
+			<option>Type 1</option>
+			<option>Type 2</option>
+			<option>Type 3</option>
+			<option>Type 4</option>
+			<option>Type 5</option>
+		</field>
+	</row>
+	<row name="Fractal Scale">
+		<field type="double" min="0.0" default="10.0" max="10.0" id="amount"/>
+	</row>
+	<row name="size">
+		<field type="double" min="0.1" default="1.0" max="10.0" id="size"/>
+	</row>
+	<row name="distort X">
+		<field type="double" min="0.0" default="0.0" max="360.0" id="distortX"/>
+	</row>
+	<row name="distort Y">
+		<field type="double" min="0.0" default="0.0" max="360.0" id="distortY"/>
+	</row>
+
+	<row name="rotation">
+		<field type="double" min="0.0" default="0.0" max="360.0" id="rotation"/>
+	</row>
+	<row name="evolution">
+		<field type="double" min="1.0" default="1.0" max="30.0" id="evolution"/>
+	</row>
+
+	<shader vert="../COMMON/common.vert" frag="kaleidoscope.frag"/>
+</effect>
