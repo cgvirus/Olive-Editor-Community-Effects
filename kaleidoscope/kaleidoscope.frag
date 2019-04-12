@@ -25,10 +25,10 @@ vec2 mirror(vec2 x)
 // One adds up the colors from all the iterations, the other uses only the last.
 void main(void)
 {
-        vec2 uv = ((2*gl_FragCoord.xy - resolution.xy)/ resolution.x)/size;
+        vec2 uv = ((2*gl_FragCoord.xy - resolution.xy)/resolution.x)/size;
         vec2 uv2 = (gl_FragCoord.xy - resolution.xy);
 
-        float a = rotation*evolution;
+        float a = (rotation*evolution)/100;
         vec4 color = vec4(0.0);
         for (float i = 1.0; i < 10.0; i += 1.0) {
                 uv = vec2(sin(a)*uv.y - cos(a)*uv.x, sin(a)*uv.x + cos(a)*uv.y);
