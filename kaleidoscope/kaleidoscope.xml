@@ -14,20 +14,20 @@
 	<row name="Fractal Scale">
 		<field type="double" min="0.0" default="10.0" max="10.0" id="amount"/>
 	</row>
-	<row name="size">
+	<row name="Size">
 		<field type="double" min="0.1" default="1.0" max="10.0" id="size"/>
 	</row>
-	<row name="distort X">
+	<row name="Distort X">
 		<field type="double" min="0.0" default="0.0" id="distortX"/>
 	</row>
-	<row name="distort Y">
+	<row name="Distort Y">
 		<field type="double" min="0.0" default="0.0" id="distortY"/>
 	</row>
 
-	<row name="rotation">
+	<row name="Rotation">
 		<field type="double" min="0.0" default="0.0" id="rotation"/>
 	</row>
-	<row name="evolution">
+	<row name="Evolution">
 		<field type="double" min="1.0" default="1.0" max="30.0" id="evolution"/>
 	</row>
 
