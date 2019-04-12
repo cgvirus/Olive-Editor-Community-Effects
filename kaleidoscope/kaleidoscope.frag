@@ -3,7 +3,6 @@
     Adaption and Implementation by CGVIRUS for Olive-Editor Community
 ***/
 
-
 uniform sampler2D tex;
 varying vec2 uTexCoord;
 uniform vec2 resolution;
