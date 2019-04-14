@@ -5,6 +5,7 @@
 
 ***/
 
+#define MSIZE 30
 
 uniform sampler2D tex;
 varying vec2 vTexCoord;
@@ -15,8 +16,6 @@ const vec2 renderScale = vec2(1.,1.);
 uniform float sigma_s;
 uniform float sigma_r;
 
-#define MSIZE 30
-
 float normpdf(in float x, in float sigma)
 {
 	return 0.39894*exp(-0.5*x*x/(sigma*sigma))/sigma;
@@ -26,7 +25,6 @@ float normpdf3(in vec3 v, in float sigma)
 {
 	return 0.39894*exp(-0.5*dot(v,v)/(sigma*sigma))/sigma;
 }
-
 
 void main()
 {
@@ -45,7 +43,6 @@ void main()
 			kernel[kSize+j] = kernel[kSize-j] = normpdf(float(j), (sigma_s*0.5)*renderScale.x);
 		}
 		
-		
 		vec3 cc;
 		float factor;
 		float bZ = 1.0/normpdf(0.0, (sigma_r*.001));
@@ -61,7 +58,6 @@ void main()
 
 			}
 		}
-		
 		
 		gl_FragColor = vec4(final_colour/Z, texture2D( tex, uv ).a);
 	}

@@ -3,7 +3,6 @@
     Adaption and Implementation by CGVIRUS for Olive-Editor Community
 ***/
 
-
 uniform sampler2D tex;
 varying vec2 uTexCoord;
 uniform vec2 resolution;
@@ -29,7 +28,6 @@ vec4 BlurColor (in vec2 Coord, in sampler2D Tex, in float MipBias)
 
     return Color/9.0;
 }
-
 
 void main(void)
 {

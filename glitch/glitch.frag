@@ -8,19 +8,16 @@
 
 ***/
 
+#define PI 3.14159265
+#define TILE_SIZE 16.0
 
 uniform sampler2D tex;
 varying vec2 vTexCoord;
 uniform float time;
+uniform float THRESHOLD;
 uniform vec2 resolution;
 
-uniform float THRESHOLD;
-
 uniform int mode;
-
-#define PI 3.14159265
-#define TILE_SIZE 16.0
-
 
 float sat( float t ) {
 	return clamp( t, 0.0, 1.0 );
@@ -167,14 +164,10 @@ vec3 distort(sampler2D sampler, vec2 uv, float edgeSize)
     return posterize(hsv2rgb(hsv), floor(mix(256.0, pow(1.0 - hsv.z - 0.5, 2.0) * 64.0 * shiftx + 4.0, 1.0 - pow(1.0 - (THRESHOLD*0.1), 5.0))));
 }
 
-
-
 void main()
 {
 	if (mode==0)
-
 	{
-
 		float time_s = mod( time, 32.0 );
 
 		float glitch_threshold = 1.0 - (THRESHOLD*0.1);
@@ -208,11 +201,8 @@ void main()
 		sample_yuv.z += 0.125 * vt_rnd * sat( vt_rnd - yuv_threshold );
 		gl_FragColor = vec4( yuv2rgb(sample_yuv), sample.a );
 	}
-
 	else if (mode==1)
-
 	{
-
 		vec2 uv = gl_FragCoord.xy / resolution.xy;
 		
 		float my_time = mod(time, 32.0);
@@ -259,7 +249,6 @@ void main()
 		gl_FragColor.a = sum.a;
 		gl_FragColor.rgb = sum.rgb;
 	}
-
 	else if (mode==2)
 	{
 		vec2 uv = gl_FragCoord.xy / resolution.xy;
@@ -267,6 +256,4 @@ void main()
 	    outColor += distort(tex, uv, 8.0);
 	    gl_FragColor = vec4(outColor, texture2D( tex, uv ).a);
 	}
-
-
 }

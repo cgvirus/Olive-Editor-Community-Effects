@@ -5,7 +5,6 @@
 
 ***/
 
-
 uniform sampler2D tex;
 varying vec2 vTexCoord;
 uniform vec2 resolution;

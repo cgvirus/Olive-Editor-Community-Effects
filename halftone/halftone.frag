@@ -5,20 +5,19 @@
 
 ***/
 
+#define D2R(d) radians(d)
+#define SST 0.888
+#define SSQ 0.288
 
 uniform sampler2D tex;
 varying vec2 vTexCoord;
 uniform vec2 resolution;
 const vec2 renderScale = vec2(1.,1.);
 
-#define D2R(d) radians(d)
-#define SST 0.888
-#define SSQ 0.288
-
+// Effect Parameters
 uniform float DOTSIZE;
 uniform float scale;
 uniform float angle;
-
 
 vec2 ORIGIN = 0.5 * resolution.xy;
 

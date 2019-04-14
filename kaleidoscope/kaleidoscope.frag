@@ -56,8 +56,6 @@ void main(void)
                 else if(mode == 5)
                 {a -= i+distortX;
                 a += i+distortY;}     
-
-
         }
 
         gl_FragColor = texture2D(tex, mirror(uv*vec2(1.,resolution.x/resolution.y)*2.0));
