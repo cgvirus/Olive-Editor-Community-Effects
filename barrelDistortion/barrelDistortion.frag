@@ -6,7 +6,6 @@
 
 ***/
 
-
 uniform sampler2D tex;
 varying vec2 vTexCoord;
 uniform vec2 resolution;
@@ -27,11 +26,9 @@ vec2 remap( vec2 t, vec2 a, vec2 b ) {
 
 vec3 spectrum_offset_rgb( float t )
 {
-
     float t0 = 3.0 * t - 1.5;
 	vec3 ret = clamp( vec3( -t0, 1.0-abs(t0), t0), 0.0, 1.0);
     return ret;
-
 }
 
 /*

@@ -9,15 +9,14 @@
     
 ***/
 
+#define USE_MIPMAP
+#define GOLDEN_ANGLE 2.39996323
 
 uniform sampler2D tex;
 varying vec2 uTexCoord;
 uniform vec2 resolution;
 
-#define USE_MIPMAP
-#define GOLDEN_ANGLE 2.39996323
-
-
+// Effect Settings
 uniform float Samples;
 uniform float Amount;
 uniform float Exposure;
@@ -50,11 +49,8 @@ vec3 Bokeh(sampler2D tex, vec2 uv, float radius, float amount)
 
 void main()
 {
-    
     vec2 uv = gl_FragCoord.xy / resolution.xy;
     float a = 40.0;
     // uv *= vec2(1.0, 1.0);
     gl_FragColor = vec4(Bokeh(tex, uv, Amount, a),texture2D( tex, uv ).a);
-    
-    
 }
