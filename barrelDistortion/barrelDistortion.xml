@@ -8,6 +8,9 @@
 	<row name="Chromatic Aberration">
 		<field type="double" min="-3.0" default="-2.0" max="3.0" id="min_distort_factor"/>
 	</row>
+	<row name="Edge Clamp">
+		<field type="bool" default="0" id="clmpBool"/>
+	</row>
 
 	<shader vert="../COMMON/common.vert" frag="barrelDistortion.frag"/>
 </effect>

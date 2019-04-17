@@ -6,6 +6,7 @@
 
 ***/
 
+
 uniform sampler2D tex;
 varying vec2 vTexCoord;
 uniform vec2 resolution;
@@ -14,6 +15,7 @@ const vec2 renderScale = vec2(1.,1.);
 
 uniform float max_distort_px;
 uniform float min_distort_factor;
+uniform int clmpBool;
 
 
 float remap( float t, float a, float b ) {
@@ -26,9 +28,11 @@ vec2 remap( vec2 t, vec2 a, vec2 b ) {
 
 vec3 spectrum_offset_rgb( float t )
 {
+
     float t0 = 3.0 * t - 1.5;
 	vec3 ret = clamp( vec3( -t0, 1.0-abs(t0), t0), 0.0, 1.0);
     return ret;
+
 }
 
 /*
@@ -135,7 +139,9 @@ vec3 render( vec2 uv )
     }
     #endif
     
-    return texture2D( tex, uv ).rgb;
+    if(clmpBool == 0)
+    {return texture2D( tex, uv ).rgb;}
+    else {return texture2D( tex, clamp(uv,0.0,1.0) ).rgb;}
 }
 
 void main()
@@ -172,5 +178,7 @@ void main()
     //outcol = lin2srgb( outcol );
     outcol += rnd/255.0;
     
-	gl_FragColor = vec4( outcol, texture2D( tex, uv ).a);
+    if(clmpBool == 0)
+	{gl_FragColor = vec4( outcol, texture2D( tex, uv ).a);}
+    else {gl_FragColor = vec4( outcol, texture2D( tex, clamp(uv,0.0,1.0) ).a);}
 }
