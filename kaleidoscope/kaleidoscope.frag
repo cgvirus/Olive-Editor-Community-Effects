@@ -11,8 +11,8 @@ uniform int mode;
 uniform float amount;
 uniform float size;
 uniform bool addup;
-uniform float rotation;
-uniform float evolution;
+uniform float parallax;
+uniform float rot;
 uniform float distortX;
 uniform float distortY;
 vec2 mirror(vec2 x)
@@ -25,13 +25,18 @@ vec2 mirror(vec2 x)
 void main(void)
 {
         vec2 uv = ((2*gl_FragCoord.xy - resolution.xy)/resolution.x)/size;
-        vec2 uv2 = (gl_FragCoord.xy - resolution.xy);
 
-        float a = (rotation*evolution)*.01;
+        float a = (parallax)*.001;
         vec4 color = vec4(0.0);
+        
+        float rot = radians(rot);
+	mat2 m = mat2(cos(rot), -sin(rot), sin(rot), cos(rot));
+   	
+
         for (float i = 1.0; i < 10.0; i += 1.0) {
                 uv = vec2(sin(a)*uv.y - cos(a)*uv.x, sin(a)*uv.x + cos(a)*uv.y);
                 uv = mirror(uv*(amount*0.1));
+                uv  = m*uv;
 
                 if(mode == 0)
                 {a += i+distortX;

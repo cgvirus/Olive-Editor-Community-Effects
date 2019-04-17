@@ -25,11 +25,12 @@
 	</row>
 
 	<row name="Rotation">
-		<field type="double" min="0.0" default="0.0" id="rotation"/>
+		<field type="double" min="0.0" default="0.0" id="rot"/>
 	</row>
-	<row name="Evolution">
-		<field type="double" min="1.0" default="1.0" max="30.0" id="evolution"/>
+	<row name="Mirror Multiplyer">
+		<field type="double" min="0.0" default="0.0" id="parallax"/>
 	</row>
+
 
 	<shader vert="../COMMON/common.vert" frag="kaleidoscope.frag"/>
 </effect>
