@@ -22,7 +22,7 @@ const float TWOPI = 6.283185307179586476925286766559;
 
 float ring(vec2 uv, float Transition)
 {
-    float rot = radians(rotation+270);
+    float rot = radians(rotation+90);
 	mat2 m = mat2(cos(rot), -sin(rot), sin(rot), cos(rot));
    	uv  = m*uv;
     
