@@ -37,6 +37,7 @@ means you should download the `COMMON`folder at least once for individual downlo
 - **[Barrel Distortion](https://github.com/cgvirus/Olive-Editor-Community-Effects/tree/master/barrelDistortion)** : Barrel Distortion with radial Blur.
 - **[Bloom](https://github.com/cgvirus/Olive-Editor-Community-Effects/tree/master/bloom)** : Bloom Effect.
 - **[Kaleidoscope](https://github.com/cgvirus/Olive-Editor-Community-Effects/tree/master/kaleidoscope)** : Kaleidoscope effect.
+- **[Radial Wipe](https://github.com/cgvirus/Olive-Editor-Community-Effects/tree/master/radialWipe)** : Radial Wipe effect.
 
 ---
 
