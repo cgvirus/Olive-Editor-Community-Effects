@@ -14,6 +14,7 @@ uniform int clock;
 uniform float Transition;
 uniform float Feather;
 uniform float rotation;
+
 // uniform float Evolution;
 
 const float PI = 3.14159265358979323846264;
@@ -24,7 +25,6 @@ float ring(vec2 uv, float Transition)
     float rot = radians(rotation+270);
 	mat2 m = mat2(cos(rot), -sin(rot), sin(rot), cos(rot));
    	uv  = m*uv;
-    // pos = m*pos;
     
   vec2 main = uv;
   float ang = atan(main.y, main.x);
@@ -45,14 +45,10 @@ void main(void)
 	uv -= 0.5;
 	uv.x *= resolution.x / resolution.y;
 	
-	// vec2 mouse = iMouse.xy/resolution.xy;
-	// mouse -= 0.5;
-	// mouse.x *= resolution.x / resolution.y;
 	
     vec2 xy = gl_FragCoord.xy / resolution.xy;
     vec4 linker = texture(tex,xy);
 	
-	// float c = ring(uv, mouse, Transition);
 	float c = ring(uv, Transition);
     
 	gl_FragColor = vec4(vec3(c), c)*linker;
