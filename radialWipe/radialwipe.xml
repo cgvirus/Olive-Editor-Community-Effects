@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect name="Radial Wipe" category="Community">
+	
+
+		<row name="Direction">
+		<field type="combo" default="1" id="clock">
+			<option>CCW</option>
+			<option>CW</option>
+		</field>
+	</row>
+	<row name="Transition">
+		<field type="double" min="0.0" default="0.0" max="360.0" id="Transition"/>
+	</row>
+
+	<row name="Feather">
+		<field type="double" min="0.001" default="0.001" max="3" id="Feather"/>
+	</row>
+
+
+	<row name="Rotation">
+		<field type="double" min="0.0" default="0.0" id="rotation"/>
+	</row>
+
+	<shader vert="../COMMON/common.vert" frag="radialwipe.frag"/>
+</effect>
