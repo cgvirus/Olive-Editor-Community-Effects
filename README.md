@@ -1,6 +1,8 @@
 # [Olive-Editor](https://github.com/olive-editor/olive)-Community-Effects
 A community effort to populate effects for Olive-Editor. Should work from the Olive Editor continuous build after Mar 29, 2019.
 
+## Current STATUS: IN HALT. DUE TO STRUCTURE CHANGES IN OLIVE. CODES WILL BE REFACTORED AFTER OLIVE IS CONFIRMED WITH STRUCTURE. THANKS.
+
 ## Install:
 - Download the zip file and extract it.
   - Inside there is `Olive-Editor-Community-Effects-master`
