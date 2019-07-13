@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<effect name="Gradient" category="Community">
+	
+	<row name="Top Color">
+		<field type="color" r="0" g="0" b="0" id="top"/>
+	</row>
+	
+	<row name="Bottom Color">
+		<field type="color" r="0" g="0" b="0" id="bottom"/>
+	</row>	
+
+	<shader vert="../COMMON/common.vert" frag="gradient.frag"/>
+</effect>
