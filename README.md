@@ -30,16 +30,17 @@ means you should download the `COMMON`folder at least once for individual downlo
 
 ### Effect List:
 
-- **[Glitch](https://github.com/cgvirus/Olive-Editor-Community-Effects/tree/master/glitch)** : Three types of Glitch Effect.
-- **[Bokeh Blur](https://github.com/cgvirus/Olive-Editor-Community-Effects/tree/master/bokehBlur)** : Bokeh Blur (Disc).
-- **[Denoise](https://github.com/cgvirus/Olive-Editor-Community-Effects/tree/master/denoise)** : Simple Denoise.
-- **[Sharpen](https://github.com/cgvirus/Olive-Editor-Community-Effects/tree/master/sharpen)** : Sharpen Effect.
-- **[Edge Find](https://github.com/cgvirus/Olive-Editor-Community-Effects/tree/master/findEdges)** : Find Edges.
-- **[Halftone](https://github.com/cgvirus/Olive-Editor-Community-Effects/tree/master/halftone)** : Creates Halftone.
-- **[Barrel Distortion](https://github.com/cgvirus/Olive-Editor-Community-Effects/tree/master/barrelDistortion)** : Barrel Distortion with radial Blur.
-- **[Bloom](https://github.com/cgvirus/Olive-Editor-Community-Effects/tree/master/bloom)** : Bloom Effect.
-- **[Kaleidoscope](https://github.com/cgvirus/Olive-Editor-Community-Effects/tree/master/kaleidoscope)** : Kaleidoscope effect.
-- **[Radial Wipe](https://github.com/cgvirus/Olive-Editor-Community-Effects/tree/master/radialWipe)** : Radial Wipe effect.
+- **[Glitch](https://github.com/cgvirus/Olive-Editor-Community-Effects/tree/master/glitch)**
+- **[Bokeh Blur](https://github.com/cgvirus/Olive-Editor-Community-Effects/tree/master/bokehBlur)**
+- **[Denoise](https://github.com/cgvirus/Olive-Editor-Community-Effects/tree/master/denoise)**
+- **[Sharpen](https://github.com/cgvirus/Olive-Editor-Community-Effects/tree/master/sharpen)**
+- **[Edge Find](https://github.com/cgvirus/Olive-Editor-Community-Effects/tree/master/findEdges)**
+- **[Halftone](https://github.com/cgvirus/Olive-Editor-Community-Effects/tree/master/halftone)**
+- **[Barrel Distortion](https://github.com/cgvirus/Olive-Editor-Community-Effects/tree/master/barrelDistortion)**
+- **[Bloom](https://github.com/cgvirus/Olive-Editor-Community-Effects/tree/master/bloom)**
+- **[Kaleidoscope](https://github.com/cgvirus/Olive-Editor-Community-Effects/tree/master/kaleidoscope)**
+- **[Radial Wipe](https://github.com/cgvirus/Olive-Editor-Community-Effects/tree/master/radialWipe)**
+- **[Gradient](https://github.com/cgvirus/Olive-Editor-Community-Effects/tree/master/gradient)**
 
 ---
 
