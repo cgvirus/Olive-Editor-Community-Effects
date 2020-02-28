@@ -56,5 +56,6 @@ void main()
     vec4 tx = texture2D(image, vTexCoord);
     vec3 blur = blurColor(image, vTexCoord, log2(kRadius*renderScale.x));
 
-    gl_FragColor = vec4(blend(tx.rgb, Tonemap(blur)), tx.a);
+    vec3 col = blend(tx.rgb, Tonemap(blur));
+    gl_FragColor = vec4(col, tx.a);
 }
