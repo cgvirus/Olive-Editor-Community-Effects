@@ -40,8 +40,7 @@ vec3 blurColor(sampler2D Tex, vec2 Coord, float MipBias)
 }
 
 vec3 blend(vec3 a, vec3 b) {
-    // return 1.0 - ((1.0 - a) * (1.0 - b));
-    return max(a,b);
+    return 1.0 - ((1.0 - a) * (1.0 - b));
 }
 
 vec3 Tonemap(vec3 x) {
