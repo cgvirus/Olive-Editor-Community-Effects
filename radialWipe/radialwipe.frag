@@ -1,7 +1,7 @@
 /***  
     Development by CGVIRUS under GNU GPL Version 3 Licence.
 ***/
-
+#version 130
 
 uniform sampler2D tex;
 varying vec2 uTexCoord;
